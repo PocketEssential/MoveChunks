@@ -1,0 +1,5 @@
+name: MoveChunks
+main: movechunks\Main
+version: 1.0.0
+authors: [KairusDarkSeeker, PocketEssential]
+api: [1.0.0, 2.0.0]
