@@ -31,9 +31,14 @@ class Main extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info("MoveChunks has been enabled");
 	}
 	
 	public function onMove(PlayerMoveEvent $event) {
 		$event->getPlayer()->getLevel()->loadChunk($event->getPlayer()->getX(), $event->getPlayer()->getZ());
+	}
+	
+	public function onDisable(){
+		$this->getLogger()->info("MoveChunks has been disabled");
 	}
 }
