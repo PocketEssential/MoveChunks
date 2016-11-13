@@ -35,7 +35,7 @@ class Main extends PluginBase implements Listener {
 	}
 	
 	public function onMove(PlayerMoveEvent $event) {
-		$event->getPlayer()->getLevel()->loadChunk($event->getPlayer()->getX(), $event->getPlayer()->getZ());
+		$event->getPlayer()->getLevel()->unloadChunk($event->getPlayer()->getX() - 1, $event->getPlayer()->getZ() - 1);
 	}
 	
 	public function onDisable(){
